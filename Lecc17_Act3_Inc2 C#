@@ -1,0 +1,36 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int[,] tabla = new int[4, 4];
+        int x = 0, yy = 0, mayorr;
+
+        for (int fila = 0; fila < 4; fila++)
+        {
+            for (int columna = 0; columna < 4; columna++)
+            {
+                Console.Write("Ingrese un numero: ");
+                tabla[fila, columna] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        mayorr = tabla[0, 0];
+
+        for (int fila = 0; fila < 4; fila++)
+        {
+            for (int columna = 0; columna < 4; columna++)
+            {
+                if (tabla[fila, columna] > mayorr)
+                {
+                    mayorr = tabla[fila, columna];
+                    x = fila;
+                    yy = columna;
+                }
+            }
+        }
+
+        Console.WriteLine("El número mayor es " + mayorr);
+        Console.WriteLine("Está en la fila " + (x + 1));
+        Console.WriteLine("y en la columna " + (yy + 1));
+    }
+}
