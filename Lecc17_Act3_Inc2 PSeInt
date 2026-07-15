@@ -1,0 +1,37 @@
+Algoritmo Lecc17_Act3_Inc2
+    // Variables para buscar el número mayor
+    Definir fila, columna, x, yy, mayorr Como Entero
+    Definir tabla Como Entero
+    Dimension tabla[4,4]
+    
+    // Llenamos la matriz
+    Para fila = 1 Hasta 4 Hacer
+        Para columna = 1 Hasta 4 Hacer
+            Escribir "Ingrese un numero:"
+            Leer tabla[fila,columna]
+        FinPara
+    FinPara
+    
+    // Tomamos el primer valor como referencia
+    mayorr = tabla[1,1]
+    x = 1
+    yy = 1
+    
+    // Verificamos si existe algún número más grande
+    Para fila = 1 Hasta 4 Hacer
+        Para columna = 1 Hasta 4 Hacer
+            Si tabla[fila, columna] > mayorr Entonces
+                // Actualizamos si encontramos un número mayor
+                mayorr = tabla[fila,columna]
+                // Guardamos sus coordenadas
+                x = fila
+                yy = columna
+            FinSi
+        FinPara
+    FinPara
+    
+    // Mostramos los resultados
+    Escribir "El número mayor es ", mayorr
+    Escribir "Está en la fila ", x
+    Escribir "y en la columna ", yy
+FinAlgoritmo
